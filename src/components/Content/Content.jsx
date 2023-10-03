@@ -11,15 +11,15 @@ const Content = () => {
    const card = useSpring({cards: 66666, from:{cards:0}})
 
    return (
-      <section className="flex-col">
-         <div className="ml-[70px] mr-[51px] text-bold  flex flex-col items-center bg-gradient-to-b shadow-md from-white/40 to-transparent rounded-[24px]">
+      <section className="flex-col !mobile:flex !mobile:flex-row items-center justify-center">
+         <div className="ml-[70px] mr-[51px] text-bold  flex flex-col items-center bg-gradient-to-b shadow-md from-white/40 to-transparent rounded-[24px] !mobile:w-[20%]">
             <div className="mt-16 gap-8 flex items-start">
                <FaUser size={'22px'} className='mt-[12px]' />
                <div className='text-[26px]'>
                   <animated.div>
                      {customer.customers.to(val => Math.floor(val))}
                   </animated.div>
-                  <p className='text-[13px] font-semibold mb-[36px]'>Customers</p>
+                  <p className='text-[13px] font-semibold mb-[36px] !mobile:text-[16px]'>Customers</p>
                </div>
             </div>
             {/* Num 2 */}
@@ -29,22 +29,22 @@ const Content = () => {
                   <animated.div>
                      {card.cards.to(val2 => Math.floor(val2))}
                   </animated.div>
-                  <p className='text-[13px] font-semibold'>Cards Issued</p>
+                  <p className='text-[13px] font-semibold !mobile:text-[16px]'>Cards Issued</p>
                </div>
             </div>
          </div>
-         <div className='text-[13px] flex flex-col w-[100%] mt-[90px] font-semibold'>
-            <div className='check-content'>
+         <div className='text-[13px] flex flex-col w-[100%] mt-[90px] font-semibold !mobile:w-[30%] !mobile:text-[16px] !mobile:ml-[20%] !mobile:mt-0'>
+            <div className='check-content '>
                <img  src={checkIconMobile} alt=''/>
                <p>Card reports sent to your phone every weeks</p>
             </div>
             {/*  */}
-            <div className='check-content'>
+            <div className='check-content '>
                <img  src={checkIconMobile} alt=''/>
                <p>No external fees</p>
             </div>
             {/*  */}
-            <div className='check-content'>
+            <div className='check-content '>
                <img src={checkIconMobile} alt=''/>
                <p>Set spending limits and restrictions </p>
             </div>
